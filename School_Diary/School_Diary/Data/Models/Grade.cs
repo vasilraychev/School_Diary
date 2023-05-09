@@ -2,7 +2,7 @@
 
 namespace School_Diary.Data.Models;
 
-public partial class Grade : IComparable<Grade>
+public class Grade : IComparable<Grade>
 {
     private int gradeNumber;
     private string gradeName;
