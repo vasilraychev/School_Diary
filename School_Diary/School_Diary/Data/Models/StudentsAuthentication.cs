@@ -60,5 +60,10 @@
         public bool IsDelete { get; set; }
 
         public virtual Student Student { get; set; } = null!;
+
+        public string PrintStudentAuthentication()
+        {
+            return $"Username: {this.StudentAuthenticationUsername}";
+        }
     }
 }
