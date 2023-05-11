@@ -1,6 +1,8 @@
-﻿namespace School_Diary.Data.Models
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace School_Diary.Data.Models
 {
-    public class Student
+    public class Student : IComparable<Student>
     {
         private string firstName;
         private string secondName;
@@ -272,5 +274,28 @@
         public virtual Grade Grade { get; set; } = null!;
         public virtual ICollection<StudentsAuthentication> StudentsAuthentications { get; set; } = new List<StudentsAuthentication>();
         public virtual ICollection<Subject> Subjects { get; set; } = new List<Subject>();
+
+        public string PrintStudent()
+        {
+            return $"{this.FirstName} {this.SecondName} {this.FamilyName}";
+        }
+        public string PrintStudentInfo()
+        {
+            return $"{this.DateOfBirth}.{this.MonthOfBirth}.{this.YearOfBirth}; {this.Gender}; {this.City}, {this.Country}";
+        }
+
+        public int CompareTo([AllowNull] Student other)
+        {
+            int result = this.FirstName.CompareTo(other.FirstName);
+            if (result == 0)
+            {
+                result = this.FamilyName.CompareTo(other.FamilyName);
+            }
+            if (result == 0)
+            {
+                result = this.SecondName.CompareTo(other.SecondName);
+            }
+            return result;
+        }
     }
 }
