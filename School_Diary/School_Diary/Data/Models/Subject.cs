@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace School_Diary.Data.Models
 {
-    internal class Subject
+    public class Subject : IComparable<Subject>
     {
         private string subjectName;
 
@@ -54,5 +50,16 @@ namespace School_Diary.Data.Models
         public virtual ICollection<Mark> Marks { get; set; } = new List<Mark>();
 
         public virtual Student Student { get; set; } = null!;
+
+        public string PrintSubject()
+        {
+            return $"{this.SubjectName}";
+        }
+
+        public int CompareTo([AllowNull] Subject other)
+        {
+            int result = this.SubjectName.CompareTo(other.SubjectName);
+            return result;
+        }
     }
 }
