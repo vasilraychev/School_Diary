@@ -1,0 +1,5 @@
+C:\Users\vasil\Documents\iCloud\School\Programming\School_Diary\School_Diary\School_Diary\obj\Debug\net6.0\School_Diary.csproj.AssemblyReference.cache
+C:\Users\vasil\Documents\iCloud\School\Programming\School_Diary\School_Diary\School_Diary\obj\Debug\net6.0\School_Diary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasil\Documents\iCloud\School\Programming\School_Diary\School_Diary\School_Diary\obj\Debug\net6.0\School_Diary.AssemblyInfoInputs.cache
+C:\Users\vasil\Documents\iCloud\School\Programming\School_Diary\School_Diary\School_Diary\obj\Debug\net6.0\School_Diary.AssemblyInfo.cs
+C:\Users\vasil\Documents\iCloud\School\Programming\School_Diary\School_Diary\School_Diary\obj\Debug\net6.0\School_Diary.csproj.CoreCompileInputs.cache
